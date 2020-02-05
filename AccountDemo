@@ -39,13 +39,7 @@ class Account implements Comparable<Account> {
 		this.noOfAccountHolders = noOfAccountHolders;
 	}
 	
-	/*
-	 * public int compare(Account a1, Account a2) {
-	 * if(a1.getNumber()>a2.getNumber()) return 1; if(a1.getNumber()<a2.getNumber())
-	 * return -1; else return 0;
-	 * 
-	 * }
-	 */
+	//This method is used to compare objects based on properties
 	public int compareTo(Account a) {
 		return this.number - a.getNumber();
 	}
@@ -56,14 +50,15 @@ public class AccountDemo {
 		Account account1= new Account(79,"dxqfkje",750.0,32);
 		Account account2= new Account(70,"yzfsutw",759.0,42);
 		Account account3= new Account(24,"iqqlcfr",966.0,85);
-	    Account account4= new Account(27,"xqaibfl",733.0,75);
-	    Account account5= new Account(79,"jxpsdpo",324.0,54);
+	   	Account account4= new Account(27,"xqaibfl",733.0,75);
+	   	Account account5= new Account(79,"jxpsdpo",324.0,54);
 
 
-	    Account[] objArray= {account1,account2,account3,account4,account5};
+	        Account[] objArray= {account1,account2,account3,account4,account5};
 
-        Account[] objArrayRes=sortAccountByNumber(objArray);
-        System.out.println("Displaying contents of array: ");
+                Account[] objArrayRes=sortAccountByNumber(objArray);
+                
+		System.out.println("Displaying contents of array: ");
 
         for(Account account:objArray){
         	System.out.println(account.getNumber()+" " + account.getAcType()+" " + account.getBalance()+" " + account.getNoOfAccountHolders()+" ");
